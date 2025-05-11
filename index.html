@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HG - Inicio</title>
+    <link rel="stylesheet" href="views/css/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <a href="index.html"><img src="views/imgs/HG_minilogo.png" alt="Logo" /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#about_us">Sobre Nosotros</a></li>
+            <li><a href="#juegos">Juegos</a></li>
+            <li><a href="views/inicio.html">Iniciar Sesión</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      
+
+      <main>
+        <img src="views/imgs/HG_logo.png" alt="" id="inicio">
+        <div class="about_us" id="about_us">
+          <div class="texto">
+            <h3>Sobre Nosotros</h3>
+            <p>En Hall of Games, jugar es más que entretenerse:
+               competir, ganar y desbloquear premios.
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="views/imgs/juegos.jpeg" alt="Logo Hall of Games">
+          </div>
+        </div>
+        
+        <div class="descripcion" id="descripcion">
+          <h3>¿Qué nos diferencia del mercado?</h3>
+          <div class="seccion_diferencias">
+            <div class="diferencia">
+              <h4>Recompensas Reales</h4>
+              <p>Jugar tiene beneficios tangibles: Gana accesorios gamers, componentes para ordenadores y contenido exclustivo en tus juegos favoritos</p>
+            </div>
+            <div class="diferencia">
+              <h4>Desafio para todos</h4>
+              <p>Compite en misiones o eventos en juegos online u offline con retos diseñados para los verdaderos gamers</p>
+            </div>
+            <div class="diferencia">
+              <h4>Conexion a tus cuentas</h4>
+              <p>Podrás conectar tu cuenta de diferentes compañias para guardar tu progreso, subir de nivel y reclamar Recompensas/p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="descripcion2">
+          <p>En hall of Games, jugar es un desafio con <strong>recompensas reales.</strong> 
+             Completa misiones, participa en eventos y <strong>gana accesorios gamer de marcas</strong>, contenido exclusivo.  <br>
+             <strong>¡Compite, supera retos y reclama tus premios!</strong>
+          </p> 
+        </div>
+
+        <div class="juegos_disponibles" id="juegos">
+          <h3>Juegos Disponibles</h3>
+          <div class="carousel">
+            <div class="carousel-images">
+              <img src="views/imgs/juegos/Farcry.jpg" alt="Juego 1" class="carousel-item">
+              <img src="views/imgs/juegos/fortnite.jpg" alt="Juego 2" class="carousel-item">
+              <img src="views/imgs/juegos/gta.jpg" alt="Juego 3" class="carousel-item">
+              <img src="views/imgs/juegos/Halo.jpg" alt="Juego 4" class="carousel-item">
+              <img src="views/imgs/juegos/valorant.jpg" alt="Juego 5" class="carousel-item">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+        </div>
+        
+        <div class="registro-bienvenida">
+          <div class="registro-texto">
+            <h3>¡Bienvenido a Hall of Games!</h3>
+            <p><a href="registro.html">Únete ahora</a>, crea tu perfil y comienza a ganar recompensas reales completando desafíos únicos. ¿Estás listo para el reto?</p>
+          </div>
+          <div class="registro-imagen">
+            <img src="views/imgs/HG_minilogo.png" alt="Registro">
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-section">
+          <h4>Telefono</h4>
+          <p>+57 123 456 7890</p>
+        </div>
+        <div class="footer-section">
+          <h4>Correo</h4>
+          <p>HallOfGames@xxxxx.com</p>
+        </div>
+        <div class="footer-section redes-sociales">
+          <h4>Redes Sociales</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="imgs/logos/facebook.png" alt="Facebook"></a>
+            <a href="https://www.Instagram.com/"><img src="imgs/logos/insta.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com"><img src="imgs/logos/tiktok.jpg" alt="Tiktok"></a>
+          </div>
+        </div>
+      </footer>
+      
+
+      <script src="js/carrusel.js"></script>
+</body>
+</html>
