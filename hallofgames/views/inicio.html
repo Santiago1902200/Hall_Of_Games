@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HG - Inicio de Sesión</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Links CSS-->
+   <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+  <div class="contenedor-inicio-sesion">
+    <!-- Espacio para ingresar el logo -->
+    <img src="imgs/HG_minilogo.png" alt="Logo" class="logo">
+
+    <!-- Formulario -->
+    <form action="../controllers/verificar.php" method="post">
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+
+      <div class="contenedor-contrasena">
+        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+        <span class="icono-toggle" onclick="mostrarOcultarContrasena()">
+          <i id="iconoOjo" class="bi bi-eye"></i>
+        </span>
+      </div>
+
+      <button type="submit" class="boton-iniciar">Iniciar Sesión</button>
+
+      <div class="enlaces">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a href="registro.html">Registrarse</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="lema">
+    <a href="../index.html"><img src="imgs/HG_logo.png" alt="" class="logomain"></a>
+    <h2 class="lema_sesion">Lleva tu juego al siguiente nivel:<br>Juega, compite y gana.</h2>
+  </div>
+
+  <script src="js/showpss.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    width: 75px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #08042c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .contenedor-inicio-sesion {
+    background-color: #402464;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* espacio para ícono de ojo */
+    margin: 8px 0;
+    border: 1px solid #e0dcdc;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .contenedor-contrasena {
+    position: relative;
+  }
+  
+  .icono-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    color: #555;
+  }
+  
+  .boton-iniciar {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #301c54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .boton-iniciar:hover {
+    background-color: #4100b9;
+  }
+  
+  .enlaces {
+    margin-top: 15px;
+  }
+  
+  .enlaces a {
+    display: block;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .enlaces a:hover {
+    text-decoration: underline;
+  }
+  
+  .lema {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+    align-items: center;     /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente (si hay altura disponible) */
+    text-align: center;      /* Centra el texto dentro del h2 */
+    padding: 50px;
+  }
+  
+  .logomain {
+    width: 500px; /* Puedes ajustar el tamaño según necesites */
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .lema_sesion{
+    color: white;
+  
+  }
+  
+  
