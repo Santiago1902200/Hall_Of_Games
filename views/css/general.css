@@ -8,6 +8,56 @@
     object-fit: contain;
   }
   
+  .carousel {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+.carousel-images a {
+  flex: 0 0 500px;
+  text-align: center;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
   body {
     font-family: Arial, sans-serif;
     background-color: #08042c;

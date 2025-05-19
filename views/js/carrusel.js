@@ -1,31 +1,30 @@
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const carouselImages = document.querySelector('.carousel-images');
-const totalImages = document.querySelectorAll('.carousel-images img').length;
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const carouselImages = document.querySelector('.carousel-images');
+  const slides = document.querySelectorAll('.carousel-images a');
+  let currentIndex = 0;
 
-// Tamaño fijo: 500px de imagen + 20px de márgenes
-const imageWidth = 500;
-
-prevButton.addEventListener('click', () => {
-  if (currentIndex === 0) {
-    currentIndex = totalImages - 1;
-  } else {
-    currentIndex--;
+  function getImageWidth() {
+    return slides[0].clientWidth; // dinámico y confiable
   }
-  updateCarouselPosition();
+
+  function updateCarouselPosition() {
+    const offset = -currentIndex * getImageWidth();
+    carouselImages.style.transform = `translateX(${offset}px)`;
+  }
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+    updateCarouselPosition();
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+    updateCarouselPosition();
+  });
+
+  // Ajuste si se redimensiona la pantalla
+  window.addEventListener('resize', updateCarouselPosition);
 });
 
-nextButton.addEventListener('click', () => {
-  if (currentIndex === totalImages - 1) {
-    currentIndex = 0;
-  } else {
-    currentIndex++;
-  }
-  updateCarouselPosition();
-});
-
-function updateCarouselPosition() {
-  const offset = -currentIndex * imageWidth;
-  carouselImages.style.transform = `translateX(${offset}px)`;
-}
