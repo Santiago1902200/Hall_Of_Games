@@ -26,7 +26,7 @@ Actualmente, existen múltiples fuentes dispersas donde se puede obtener informa
 
 
 ## Enlace del Proyecto
-](https://tu-enlace-a-la-pagina-web.com)
+[](https://tu-enlace-a-la-pagina-web.com)](https://hallofgames.infinityfreeapp.com/?i=1)
 
 ## Características Principales
 - Registro de usuarios con validación de email, nombre, usuario y contraseña.  
