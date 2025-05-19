@@ -1,11 +1,13 @@
 <?php 
+
+
 // Función para establecer conexión con la base de datos
 function conectarBD() {
     // Datos de conexión: servidor, usuario, contraseña y nombre de la base de datos
-    $servidor = "localhost";
-    $usuario = "root";
-    $password = "";
-    $bd = "hall_of_games";
+    $servidor = "sql311.infinityfree.com";
+    $usuario = "if0_39025433";
+    $password = "Hallofgames123";
+    $bd = "if0_39025433_Hallofgames";
 
     // Se crea la conexión utilizando MySQLi
     $conexion = new mysqli($servidor, $usuario, $password, $bd);
