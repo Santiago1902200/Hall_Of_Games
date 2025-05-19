@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Detalles del Juego</title>
+  <!-- Enlace a la hoja de estilos CSS específica para esta página -->
   <link rel="stylesheet" href="css/detalles.css">
 </head>
 <body>
+  <!-- Contenedor principal que agrupa todos los detalles del juego -->
   <div class="contenedor-detalles">
+    <!-- Título del juego, inicialmente con texto "Cargando..." -->
     <h2 id="titulo-juego">Cargando...</h2>
+    <!-- Imagen del juego, inicialmente sin fuente ni texto alternativo específico -->
     <img id="imagen-juego" src="" alt="Imagen del juego" class="imagen-juego">
+    <!-- Descripción del juego con etiqueta <span> para insertar texto dinámicamente -->
     <p><strong>Descripción:</strong> <span id="descripcion-juego"></span></p>
+    <!-- Categoría del juego -->
     <p><strong>Categoría:</strong> <span id="categoria-juego"></span></p>
+    <!-- Plataforma(s) en que está disponible el juego -->
     <p><strong>Plataforma:</strong> <span id="plataforma-juego"></span></p>
+    <!-- Número de jugadores por mes -->
     <p><strong>Jugadores por mes:</strong> <span id="jugadores-juego"></span></p>
 
+    <!-- Botón para agregar el juego a la lista de favoritos -->
     <button id="agregar-favoritos">Agregar a Favoritos</button>
   </div>
 
+  <!-- Inclusión del archivo JavaScript que maneja la lógica de la página -->
   <script src="js/detalles.js"></script>
 </body>
 </html>

@@ -42,22 +42,31 @@ const juegos = {
   }
 };
 
+// Se ejecuta cuando el contenido HTML está completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
+  // Obtiene el contenedor donde se mostrarán los juegos favoritos
   const listaFavoritos = document.getElementById("lista-favoritos");
+  // Recupera el arreglo de favoritos guardados en localStorage o uno vacío si no hay
   let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
+  // Si no hay juegos favoritos, muestra un mensaje y termina la ejecución
   if (favoritos.length === 0) {
     listaFavoritos.innerHTML = "<p>No tienes juegos favoritos aún.</p>";
     return;
   }
 
+  // Para cada juego guardado en favoritos
   favoritos.forEach(nombreJuego => {
+    // Busca los datos del juego en el objeto "juegos"
     const juego = juegos[nombreJuego];
-    if (!juego) return; // En caso que no exista el juego
+    // Si no existe el juego, simplemente ignora y continúa
+    if (!juego) return;
 
+    // Crea un contenedor <div> para mostrar la información del juego favorito
     const div = document.createElement("div");
     div.className = "favorito-item";
 
+    // Llena el div con la estructura HTML que muestra imagen, título, descripción, categoría, plataforma y jugadores
     div.innerHTML = `
       <img src="${juego.imagen}" alt="${juego.titulo}" />
       <div class="favorito-info">
@@ -70,17 +79,23 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="btn-eliminar" data-juego="${nombreJuego}">Eliminar</button>
     `;
 
+    // Añade el div creado al contenedor principal de favoritos
     listaFavoritos.appendChild(div);
   });
 
-  // Manejar eliminación
+  // Añade un event listener para detectar clicks dentro del contenedor de favoritos (delegación)
   listaFavoritos.addEventListener("click", (e) => {
+    // Si el elemento clickeado es un botón con clase 'btn-eliminar'
     if (e.target.classList.contains("btn-eliminar")) {
+      // Obtiene el nombre del juego a eliminar a partir del atributo data-juego del botón
       const juegoEliminar = e.target.getAttribute("data-juego");
+      // Actualiza el arreglo de favoritos eliminando el juego seleccionado
       favoritos = favoritos.filter(j => j !== juegoEliminar);
+      // Guarda el arreglo actualizado en localStorage
       localStorage.setItem("favoritos", JSON.stringify(favoritos));
-      // Quitar del DOM
+      // Elimina el contenedor del juego del DOM para que desaparezca de la vista
       e.target.parentElement.remove();
+      // Si después de eliminar no quedan juegos favoritos, muestra mensaje
       if (favoritos.length === 0) {
         listaFavoritos.innerHTML = "<p>No tienes juegos favoritos aún.</p>";
       }

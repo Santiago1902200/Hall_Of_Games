@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <title>HG - Inicio</title>
+    <!-- Estilo CSS principal de la página -->
     <link rel="stylesheet" href="views/css/index.css">
 </head>
 <body>
     <header class="header">
+        <!-- Logo que enlaza a la página principal -->
         <div class="logo">
           <a href="index.html"><img src="views/imgs/HG_minilogo.png" alt="Logo" /></a>
         </div>
+        <!-- Menú de navegación -->
         <nav class="menu">
           <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -20,10 +23,11 @@
         </nav>
       </header>
 
-      
-
       <main>
+        <!-- Imagen principal con id para anclaje -->
         <img src="views/imgs/HG_logo.png" alt="" id="inicio">
+
+        <!-- Sección Sobre Nosotros -->
         <div class="about_us" id="about_us">
           <div class="texto">
             <h3>Sobre Nosotros</h3>
@@ -36,17 +40,21 @@
           </div>
         </div>
         
+        <!-- Sección que describe diferencias con el mercado -->
         <div class="descripcion" id="descripcion">
           <h3>¿Qué nos diferencia del mercado?</h3>
           <div class="seccion_diferencias">
+            <!-- Diferencia 1 -->
             <div class="diferencia">
               <h4>Recompensas Reales</h4>
               <p>Jugar tiene beneficios tangibles: Gana accesorios gamers, componentes para ordenadores y contenido exclustivo en tus juegos favoritos</p>
             </div>
+            <!-- Diferencia 2 -->
             <div class="diferencia">
               <h4>Desafio para todos</h4>
               <p>Compite en misiones o eventos en juegos online u offline con retos diseñados para los verdaderos gamers</p>
             </div>
+            <!-- Diferencia 3 -->
             <div class="diferencia">
               <h4>Conexion a tus cuentas</h4>
               <p>Podrás conectar tu cuenta de diferentes compañias para guardar tu progreso, subir de nivel y reclamar Recompensas</p>
@@ -54,6 +62,7 @@
           </div>
         </div>
         
+        <!-- Texto adicional de descripción -->
         <div class="descripcion2">
           <p>En hall of Games, jugar es un desafio con <strong>recompensas reales.</strong> 
              Completa misiones, participa en eventos y <strong>gana accesorios gamer de marcas</strong>, contenido exclusivo.  <br>
@@ -61,21 +70,25 @@
           </p> 
         </div>
 
+        <!-- Sección de Juegos Disponibles con carrusel -->
         <div class="juegos_disponibles" id="juegos">
           <h3>Juegos Disponibles</h3>
           <div class="carousel">
             <div class="carousel-images">
+              <!-- Cada imagen es un enlace a la página de detalles del juego -->
               <a href="views/detalles.html?juego=Farcry"><img src="views/imgs/juegos/Farcry.jpg" alt="Farcry" class="carousel-item"></a>
               <a href="views/detalles.html?juego=Fortnite"><img src="views/imgs/juegos/fortnite.jpg" alt="Fortnite" class="carousel-item"></a>
               <a href="views/detalles.html?juego=GTA"><img src="views/imgs/juegos/gta.jpg" alt="GTA" class="carousel-item"></a>
               <a href="views/detalles.html?juego=Halo"><img src="views/imgs/juegos/Halo.jpg" alt="Halo" class="carousel-item"></a>
               <a href="views/detalles.html?juego=Valorant"><img src="views/imgs/juegos/valorant.jpg" alt="Valorant" class="carousel-item"></a>
           </div>
+          <!-- Botones para navegar el carrusel -->
           <button class="prev">&#10094;</button>
           <button class="next">&#10095;</button>
           </div>
         </div>
         
+        <!-- Sección de bienvenida y llamada a registro -->
         <div class="registro-bienvenida">
           <div class="registro-texto">
             <h3>¡Bienvenido a Hall of Games!</h3>
@@ -88,14 +101,17 @@
       </main>
 
       <footer class="footer">
+        <!-- Información de contacto telefónico -->
         <div class="footer-section">
           <h4>Telefono</h4>
           <p>+57 123 456 7890</p>
         </div>
+        <!-- Información de correo -->
         <div class="footer-section">
           <h4>Correo</h4>
           <p>HallOfGames@xxxxx.com</p>
         </div>
+        <!-- Sección con íconos y enlaces a redes sociales -->
         <div class="footer-section redes-sociales">
           <h4>Redes Sociales</h4>
           <div class="social-icons">
@@ -106,7 +122,7 @@
         </div>
       </footer>
       
-
+      <!-- Script que controla el carrusel de juegos -->
       <script src="views/js/carrusel.js"></script>
 </body>
 </html>

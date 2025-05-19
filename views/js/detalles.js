@@ -42,20 +42,26 @@ const juegos = {
   }
 };
 
+// Función para obtener el valor de un parámetro en la URL por su nombre
 function obtenerParametro(nombre) {
   const params = new URLSearchParams(window.location.search);
   return params.get(nombre);
 }
 
+// Se ejecuta cuando el contenido HTML está completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
+  // Obtiene el parámetro "juego" de la URL
   const nombreJuego = obtenerParametro("juego");
+  // Busca el objeto del juego en el objeto "juegos"
   const juego = juegos[nombreJuego];
 
+  // Si no existe el juego, muestra un mensaje y detiene la ejecución
   if (!juego) {
     document.body.innerHTML = "<p>Juego no encontrado</p>";
     return;
   }
 
+  // Actualiza el contenido de la página con los datos del juego
   document.getElementById("titulo-juego").textContent = juego.titulo;
   document.getElementById("imagen-juego").src = `../${juego.imagen}`;
   document.getElementById("imagen-juego").alt = juego.titulo;
@@ -64,14 +70,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("plataforma-juego").textContent = juego.plataforma;
   document.getElementById("jugadores-juego").textContent = juego.jugadores;
 
+  // Agrega un evento al botón "Agregar a favoritos"
   document.getElementById("agregar-favoritos").addEventListener("click", () => {
+    // Recupera el arreglo de favoritos del localStorage o crea uno nuevo si no existe
     let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    // Si el juego no está ya en favoritos, lo añade y actualiza localStorage
     if (!favoritos.includes(nombreJuego)) {
       favoritos.push(nombreJuego);
       localStorage.setItem("favoritos", JSON.stringify(favoritos));
       alert(`Juego "${juego.titulo}" agregado a favoritos.`);
+      // Redirige a la página de favoritos pasando el juego como parámetro
       window.location.href = `favoritos.html?juego=${nombreJuego}`;
     } else {
+      // Si ya está en favoritos, muestra alerta correspondiente
       alert("Este juego ya está en tus favoritos.");
     }
   });

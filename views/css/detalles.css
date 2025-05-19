@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET: Se eliminan los márgenes y rellenos por defecto, y se establece el modelo de caja para todos los elementos */
 * {
   margin: 0;
   padding: 0;
@@ -6,68 +6,75 @@
 }
 
 /* GLOBAL */
+
+/* Estilos generales del cuerpo de la página */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #08042c;
-  color: white;
-  padding: 80px 20px 40px; /* para evitar que quede debajo del header */
+  font-family: Arial, sans-serif; /* Fuente general */
+  background-color: #08042c; /* Fondo oscuro */
+  color: white; /* Color de texto base */
+  padding: 80px 20px 40px; /* Espacio alrededor, especialmente arriba para no tapar el contenido con el header */
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centra el contenido horizontalmente */
 }
 
+/* Contenedor principal donde se muestran los detalles del juego */
 .contenedor-detalles {
-  background: #1b1464;
-  border-radius: 15px;
-  max-width: 700px;
-  width: 100%;
-  padding: 30px 40px;
-  box-shadow: 0 0 20px #3a2e8f;
-  text-align: center;
+  background: #1b1464; /* Fondo del contenedor */
+  border-radius: 15px; /* Bordes redondeados */
+  max-width: 700px; /* Máximo ancho del contenedor */
+  width: 100%; /* Se adapta al 100% del ancho disponible */
+  padding: 30px 40px; /* Espaciado interno */
+  box-shadow: 0 0 20px #3a2e8f; /* Sombra para dar efecto de profundidad */
+  text-align: center; /* Centra el contenido dentro */
 }
 
+/* Imagen del juego */
 .imagen-juego {
-  max-width: 50%;
-  height: auto;
-  border-radius: 12px;
-  margin: 20px 0;
-  box-shadow: 0 0 15px #6f5af1;
+  max-width: 50%; /* Ocupa hasta la mitad del ancho disponible */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 12px; /* Bordes redondeados */
+  margin: 20px 0; /* Separación vertical */
+  box-shadow: 0 0 15px #6f5af1; /* Efecto de brillo */
 }
 
+/* Título del juego */
 h2#titulo-juego {
-  font-size: 42px;
-  color: #c0b4fc;
-  margin-bottom: 15px;
+  font-size: 42px; /* Tamaño grande */
+  color: #c0b4fc; /* Color lila claro */
+  margin-bottom: 15px; /* Separación inferior */
   font-weight: bold;
-  text-shadow: 0 0 8px #8a7ef1;
+  text-shadow: 0 0 8px #8a7ef1; /* Efecto de brillo en el texto */
 }
 
-/* Detalles */
+/* Estilos generales para los párrafos */
 p {
   font-size: 18px;
   margin: 10px 0;
-  color: #d3c2ff;
+  color: #d3c2ff; /* Lila suave */
 }
 
+/* Estilo especial para textos en negrita dentro de los párrafos */
 p strong {
-  color: #9d7bff;
+  color: #9d7bff; /* Color más vibrante */
   font-weight: 700;
 }
 
-/* Botón */
+/* BOTÓN: Agregar a favoritos */
 #agregar-favoritos {
   margin-top: 30px;
-  background-color: #6f5af1;
+  background-color: #6f5af1; /* Color base del botón */
   border: none;
   color: white;
   font-size: 20px;
   padding: 12px 25px;
   border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 12px #a99fff;
+  cursor: pointer; /* Cambia el cursor al pasar sobre él */
+  transition: background-color 0.3s ease; /* Efecto suave al cambiar el color */
+  box-shadow: 0 0 12px #a99fff; /* Efecto de luz alrededor del botón */
 }
 
+/* Efecto cuando el mouse pasa por encima del botón */
 #agregar-favoritos:hover {
-  background-color: #8a7ef1;
-  box-shadow: 0 0 20px #b7b3ff;
+  background-color: #8a7ef1; /* Color más claro al pasar el mouse */
+  box-shadow: 0 0 20px #b7b3ff; /* Sombra más intensa */
 }

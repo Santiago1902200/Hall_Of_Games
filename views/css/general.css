@@ -1,36 +1,43 @@
+/* Aplica box-sizing para que el padding y el border no aumenten el tamaño total de los elementos */
 * {
-    box-sizing: border-box;
-  }
-  
-  .logo {
-    width: 75px;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .carousel {
+  box-sizing: border-box;
+}
+
+/* Estilo para el logo principal */
+.logo {
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Contenedor principal del carrusel */
+.carousel {
   position: relative;
   max-width: 500px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden; /* Oculta las imágenes que quedan fuera del contenedor */
 }
 
+/* Contenedor de las imágenes del carrusel */
 .carousel-images {
-  display: flex;
-  transition: transform 0.8s ease;
+  display: flex; /* Muestra las imágenes en fila */
+  transition: transform 0.8s ease; /* Animación al deslizar */
 }
 
+/* Cada imagen ocupa el 100% del ancho del carrusel */
 .carousel-images a {
   flex: 0 0 500px;
   text-align: center;
 }
 
+/* Estilo para las imágenes del carrusel */
 .carousel-images img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Botones de navegación del carrusel (anterior y siguiente) */
 button.prev,
 button.next {
   position: absolute;
@@ -45,113 +52,128 @@ button.next {
   z-index: 10;
 }
 
+/* Efecto hover para los botones del carrusel */
 button.prev:hover,
 button.next:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Posición del botón de anterior */
 .prev {
   left: 10px;
 }
 
+/* Posición del botón de siguiente */
 .next {
   right: 10px;
 }
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #08042c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .contenedor-inicio-sesion {
-    background-color: #402464;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
-  
-  input[type="email"],
-  input[type="password"],
-  input[type="text"] {
-    width: 100%;
-    padding: 10px 40px 10px 10px; /* espacio para ícono de ojo */
-    margin: 8px 0;
-    border: 1px solid #e0dcdc;
-    border-radius: 20px;
-    font-size: 14px;
-  }
-  
-  .contenedor-contrasena {
-    position: relative;
-  }
-  
-  .icono-toggle {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    user-select: none;
-    color: #555;
-  }
-  
-  .boton-iniciar {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #301c54;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-  }
-  
-  .boton-iniciar:hover {
-    background-color: #4100b9;
-  }
-  
-  .enlaces {
-    margin-top: 15px;
-  }
-  
-  .enlaces a {
-    display: block;
-    margin: 5px 0;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .enlaces a:hover {
-    text-decoration: underline;
-  }
-  
-  .lema {
-    display: flex;
-    flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
-    align-items: center;     /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente (si hay altura disponible) */
-    text-align: center;      /* Centra el texto dentro del h2 */
-    padding: 50px;
-  }
-  
-  .logomain {
-    width: 500px; /* Puedes ajustar el tamaño según necesites */
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .lema_sesion{
-    color: white;
-  
-  }
-  
+/* Estilos generales del cuerpo del documento */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #08042c; /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura de la ventana completa */
+  margin: 0;
+}
+
+/* Contenedor del formulario de inicio de sesión */
+.contenedor-inicio-sesion {
+  background-color: #402464;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Estilos para los campos de entrada */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* Deja espacio a la derecha para el ícono */
+  margin: 8px 0;
+  border: 1px solid #e0dcdc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Contenedor que envuelve el input y el ícono de contraseña */
+.contenedor-contrasena {
+  position: relative;
+}
+
+/* Ícono para mostrar/ocultar la contraseña */
+.icono-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  color: #555;
+}
+
+/* Botón para iniciar sesión */
+.boton-iniciar {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #301c54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Efecto hover para el botón de inicio de sesión */
+.boton-iniciar:hover {
+  background-color: #4100b9;
+}
+
+/* Contenedor para enlaces de "olvidaste tu contraseña", etc. */
+.enlaces {
+  margin-top: 15px;
+}
+
+/* Estilo para los enlaces */
+.enlaces a {
+  display: block;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Efecto hover para los enlaces */
+.enlaces a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor del logo y el lema en la parte superior */
+.lema {
+  display: flex;
+  flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+  align-items: center;     /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente si hay espacio */
+  text-align: center;      /* Centra el texto */
+  padding: 50px;
+}
+
+/* Estilo del logo principal grande */
+.logomain {
+  width: 500px; /* Tamaño ajustable */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Estilo del texto del lema */
+.lema_sesion {
+  color: white;
+}
+
   

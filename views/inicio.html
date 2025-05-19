@@ -3,31 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>HG - Inicio de Sesión</title>
-  <!-- Bootstrap CSS -->
+  <!-- Importa el CSS de Bootstrap para estilos prediseñados -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  <!-- Importa los íconos de Bootstrap para usar iconos en la interfaz -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Links CSS-->
-   <link rel="stylesheet" href="css/general.css">
+  <!-- Enlace a la hoja de estilos personalizada general -->
+  <link rel="stylesheet" href="css/general.css">
 </head>
 <body>
   <div class="contenedor-inicio-sesion">
-    <!-- Espacio para ingresar el logo -->
+    <!-- Espacio reservado para mostrar el logo pequeño -->
     <img src="imgs/HG_minilogo.png" alt="Logo" class="logo">
 
-    <!-- Formulario -->
+    <!-- Formulario de inicio de sesión que envía datos a verificar.php -->
     <form action="../controllers/verificar.php" method="post">
+      <!-- Campo para ingresar el correo electrónico, obligatorio -->
       <input type="email" name="email" placeholder="Correo electrónico" required>
 
+      <!-- Contenedor para la contraseña y el ícono para mostrar/ocultar -->
       <div class="contenedor-contrasena">
+        <!-- Campo para ingresar la contraseña, tipo password, obligatorio -->
         <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+        <!-- Ícono que al hacer clic ejecuta la función mostrarOcultarContrasena -->
         <span class="icono-toggle" onclick="mostrarOcultarContrasena()">
+          <!-- Ícono de ojo que cambia según se muestre o no la contraseña -->
           <i id="iconoOjo" class="bi bi-eye"></i>
         </span>
       </div>
 
+      <!-- Botón para enviar el formulario y hacer login -->
       <button type="submit" class="boton-iniciar">Iniciar Sesión</button>
 
+      <!-- Enlaces para recuperar contraseña o registrarse -->
       <div class="enlaces">
         <a href="#">¿Olvidaste tu contraseña?</a>
         <a href="registro.html">Registrarse</a>
@@ -35,11 +42,13 @@
     </form>
   </div>
 
+  <!-- Sección con logo grande y lema motivacional -->
   <div class="lema">
     <a href="../index.html"><img src="imgs/HG_logo.png" alt="" class="logomain"></a>
     <h2 class="lema_sesion">Lleva tu juego al siguiente nivel:<br>Juega, compite y gana.</h2>
   </div>
 
+  <!-- Inclusión del script para mostrar/ocultar contraseña -->
   <script src="js/showpss.js"></script>
 </body>
 </html>
